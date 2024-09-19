@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="imagetoolbar" content="no">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="윤영민 포트폴리오">
+  <meta property="og:description" content="윤영민 포트폴리오">
+  <meta property="og:site_name" content="윤영민 포트폴리오">
+  <meta property="og:image" content="./img/og-img.png">
+  <meta name="keywords" content="윤영민 포트폴리오">
+  <meta name="description" content="윤영민 포트폴리오">
+  <meta name="copyright" content="copyrights 윤영민 포트폴리오">
+  <title>윤영민 포트폴리오</title>
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/font.css">
+  <link rel="stylesheet" href="./css/swiper.min.css">
+  <link rel="stylesheet" href="./css/aos.css">
+  <script src="./js/jquery-1.12.4.min.js"></script>
+  <script src="./js/script.js"></script>
+  <script src="./js/aos.js"></script>
+  <script src="./js/swiper.min.js"></script>
+</head>
+<body>
+  <script>AOS.init();</script>
+  <section id="intro">
+    <div class="title__box">
+      <h1 class="title" data-aos="fade-up" data-aos-duration="3000">
+        frontend<br>portfolio
+      </h1>
+    </div>
+    <div class="firework">
+      <div class="firecracker boom" style="font-size: 26px; left: 13%; top: 36%;"></div>
+      <div class="firecracker boom" style="font-size: 8px; left: 59%; top: 61%;"></div>
+      <div class="firecracker boom" style="font-size: 6px; left: 23%; top: 59%;"></div>
+      <div class="firecracker boom" style="font-size: 24px; left: 75%; top: 74%;"></div>
+      <div class="firecracker boom" style="font-size: 29px; left: 7%; top: 71%;"></div>
+      <div class="firecracker boom" style="font-size: 17px; left: 67%; top: 71%;"></div>
+      <div class="firecracker boom" style="font-size: 22px; left: 64%; top: 62%;"></div>
+      <div class="firecracker boom" style="font-size: 5px; left: 30%; top: 28%;"></div>
+      <div class="firecracker boom" style="font-size: 5px; left: 94%; top: 17%;"></div>
+      <div class="firecracker" style="font-size: 22px; left: 94.2801%; top: 53.5602%;"></div>
+      <div class="firecracker" style="font-size: 25px; left: 51.8256%; top: 37.3849%;"></div>
+      <div class="firecracker" style="font-size: 8px; left: 23.5689%; top: 29.8341%;"></div>
+      <div class="firecracker" style="font-size: 20px; left: 72.4981%; top: 69.2758%;"></div>
+      <div class="firecracker" style="font-size: 22px; left: 46.0047%; top: 66.0107%;"></div>
+      <div class="firecracker" style="font-size: 10px; left: 88.3905%; top: 72.1182%;"></div>
+      <div class="firecracker" style="font-size: 10px; left: 58.716%; top: 62.4208%;"></div>
+      <div class="firecracker" style="font-size: 19px; left: 23.9798%; top: 51.6254%;"></div>
+      <div class="firecracker" style="font-size: 15px; left: 25.2824%; top: 84.6674%;"></div>
+      <div class="firecracker" style="font-size: 12px; left: 81.6533%; top: 60.5795%;"></div>
+      <div class="firecracker" style="font-size: 19px; left: 35.3988%; top: 86.3004%;"></div>
+      <div class="firecracker" style="font-size: 17px; left: 45.5544%; top: 95.236%;"></div>
+      <div class="firecracker" style="font-size: 5px; left: 70.4091%; top: 64.7783%;"></div>
+      <div class="firecracker" style="font-size: 13px; left: 65.4991%; top: 93.3753%;"></div>
+      <div class="firecracker" style="font-size: 7px; left: 55.6616%; top: 88.9252%;"></div>
+      <div class="firecracker" style="font-size: 16px; left: 91.1386%; top: 95.5352%;"></div>
+      <div class="firecracker" style="font-size: 21px; left: 94.9599%; top: 97.3009%;"></div>
+      <div class="firecracker" style="font-size: 17px; left: 24.7007%; top: 99.0852%;"></div>
+      <div class="firecracker" style="font-size: 29px; left: 61.9998%; top: 99.9997%;"></div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      const generateRandom = function (begin, end) {
+        const max = Math.max(begin, end);
+        const min = Math.min(begin, end);
+        const range = max - min;
+        return Math.random() * range + min;
+      };
+      const generateRandomInteger = function (begin, end) {
+        return parseInt(generateRandom(begin, end));
+      };
+
+      $(function () {
+
+        setInterval(() => {
+
+          //.firecracker 추가
+          const firecracker = $("<div>").addClass("firecracker");
+
+          //초기 스타일 설정
+          firecracker.css("font-size", generateRandomInteger(5, 30) + "px")
+            .css("left", generateRandomInteger(0, 100) + "%")
+            .css("top", "100%");
+
+          $(".firework").append(firecracker);
+
+          //랜덤값 설정(애니메이션을 위해)
+          const top = generateRandomInteger(5, 75);
+          const left = generateRandomInteger(5, 95);
+          const duration = generateRandomInteger(2500, 7000);
+
+          //애니메이션 설정
+          firecracker.animate({
+            top: top + "%",
+            left: left + "%"
+          }, duration, () => {
+            //폭발하는 모션을 위한 클래스 추가
+            firecracker.addClass("boom");
+
+            //폭발모션은 지속시간이 2초이므로 2.5초 후 태그 제거
+            setTimeout(() => {
+              firecracker.remove();
+            }, 2500);
+          });
+
+        }, 250);//delay를 조절하면 폭죽 발사 속도 조절 가능(빠를 수록 시스템에 무리감)
+
+      });
+
+    </script>
+  </section>
+
+  <section id="main">
+    <div class="text__box">
+      <h1 class="text" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
+        혁신적인 경험을 선사하는<br>
+        프론트엔드 개발자 윤영민
+      </h1>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="text__box">
+      <div class="text" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
+        아름다운 사용자 인터페이스(UI)를 디자인하고,<br>
+        웹 기술을 통해 혁신적인 경험을 선사하고자 합니다.
+      </div>
+    </div>
+  </section>
+  
+  <section id="skills">
+    <h1 class="section-title">SKILLS</h1>
+    <div class="section-text">
+      제가 보유한 스킬입니다.
+    </div>
+    <div class="skill__wrap">
+      <div class="skill__box box01">
+        <div class="icon__box box01">
+          <div class="icon"><img src="./img/skills-icon01.png" alt=""></div>
+          <div class="icon"><img src="./img/skills-icon02.png" alt=""></div>
+          <div class="icon"><img src="./img/skills-icon03.png" alt=""></div>
+          <div class="icon"><img src="./img/skills-icon04.png" alt=""></div>
+        </div>
+        <div class="icon__box box02">
+          <div class="icon"><img src="./img/skills-icon05.png" alt=""></div>
+          <div class="icon"><img src="./img/skills-icon06.png" alt=""></div>
+        </div>
+      </div>
+      <div class="skill__box box02">
+        <div class="icon"><img src="./img/skills-icon07.png" alt=""></div>
+        <div class="icon"><img src="./img/skills-icon08.png" alt=""></div>
+        <div class="icon"><img src="./img/skills-icon09.png" alt=""></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2 class="section-title">PROJECTS</h2>
+    <div class="section-text">
+      반응형으로 작업한 웹 프로젝트입니다.
+    </div>
+    <div class="project__wrap">
+      <div class="content-box career">
+        <div class="box__wrap">
+          <ul>
+            <li>
+              <a href="http://gntourism.co.kr/" target="_blank">
+                <div class="img__box">
+                  <img src="./img/gntourism.jpg" alt="">
+                </div>
+                <div class="text__box">
+                  <p class="title">경남관광온라인플랫폼</p>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="http://badasoop.com/" target="_blank">
+                <div class="img__box">
+                  <img src="./img/badasoop.JPG" alt="">
+                </div>
+                <div class="text__box">
+                  <p class="title">바다숲</p>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="http://anhsystems.com/" target="_blank">
+                <div class="img__box">
+                  <img src="./img/anhsystems.JPG" alt="">
+                </div>
+                <div class="text__box">
+                  <p class="title">ANH시스템즈</p>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="http://xn--3j1bw2bt0k5qhp6z.com/" target="_blank">
+                <div class="img__box">
+                  <img src="./img/kdens.JPG" alt="">
+                </div>
+                <div class="text__box">
+                  <p class="title">경동이앤에스</p>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="http://www.hcvacance.kr/" target="_blank">
+                <div class="img__box">
+                  <img src="./img/hcvacance.JPG" alt="">
+                </div>
+                <div class="text__box">
+                  <p class="title">2022 합천바캉스 축제</p>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="https://sancheong-expo.or.kr/" target="_blank">
+                <div class="img__box">
+                  <img src="./img/sancheong-expo.JPG" alt="">
+                </div>
+                <div class="text__box">
+                  <p class="title">산청항노화엑스포</p>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="http://grandnoodle.co.kr/" target="_blank">
+                <div class="img__box">
+                  <img src="./img/grandnoodle.JPG" alt="">
+                </div>
+                <div class="text__box">
+                  <p class="title">거창한국수</p>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="http://www.angelux.co.kr/" target="_blank">
+                <div class="img__box">
+                  <img src="./img/angelux.JPG" alt="">
+                </div>
+                <div class="text__box">
+                  <p class="title">엔젤럭스</p>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- <div class="section-text">
+      typescript/react 프로젝트입니다.
+    </div>
+    <div class="project__wrap">
+      <a href="./page/typescript.html">타입스크립트</a>
+      <a href="./page/react.html">리액트</a>
+    </div> -->
+    
+  </section>
+
+  <section id="archiving">
+    <h1 class="section-title">ARCHIVING</h1>
+    <div class="section-text">
+      개인적으로 작업하는 저장소입니다.
+    </div>
+    <div class="archiving__wrap">
+      <div class="archiving__box">
+        <div class="logo__line">
+          <img src="./img/archiving-logo-github.png" alt="">
+        </div>
+        <div class="address__line">
+          <a href="https://github.com/yymim/frontend" target="_blank">https://github.com/yymim/frontend</a>
+        </div>
+        <div class="text__line">소스 코드 저장소 입니다.</div>
+        <ul class="list__line">
+          <li>공부를 위한 소스 코드입니다.</li>
+          <li>연습문제를 진행한 코드입니다.</li>
+          <li>여러 코드들을 정리해두었습니다.</li>
+        </ul>
+      </div>
+      <!-- <div class="archiving__box">
+        <div class="logo__line">
+          <img src="./img/archiving-logo-tistory.png" alt="">
+        </div>
+        <div class="address__line">
+          <a href="https://aestheticcodehub.tistory.com/" target="_blank">https://aestheticcodehub.tistory.com/</a>
+        </div>
+        <div class="text__line">공부 및 공유 목적의 블로그 입니다.</div>
+        <ul class="list__line">
+          <li>공부한 것을 나의 것으로 만들기 위한 기록</li>
+          <li>웹 관련 지식 정리</li>
+          <li>지식 공유를 위한 통한 선한 영향력 행사</li>
+        </ul>
+      </div> -->
+      <div class="archiving__box">
+        <div class="logo__line">
+          <img src="./img/archiving-logo-notion.png" alt="">
+        </div>
+        <div class="address__line">
+          <a href="https://www.notion.so/2a367e9db8f8461d9a115d6254ab2bad?pvs=4" target="_blank">https://www.notion.so/2a367e9db8f8461d9a115d6254ab2bad?pvs=4</a>
+        </div>
+        <div class="text__line">소스 코드 메모장 입니다.</div>
+        <ul class="list__line">
+          <li>공부하며 기록한 메모입니다.</li>
+          <li>복습을 위한 기록입니다.</li>
+          <li>공부한 부분들을 재정리 한 메모입니다.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- <footer id="footer">
+    <div class="ocean">
+      <div class="wave"></div>
+      <div class="wave"></div>
+    </div>
+  </footer> -->
+
+</body>
+</html>
